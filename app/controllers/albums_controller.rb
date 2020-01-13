@@ -51,6 +51,8 @@ class AlbumsController < ApplicationController
     redirect_to albums_path
   end
 
+  #this always goes at the very bottom
+
   private
     def album_params
       params.require(:album).permit(:name, :genre)
