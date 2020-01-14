@@ -1,14 +1,16 @@
-<h1>Albums</h1>
+<div class="nameHeaders">
+  <h1>Albums</h1>
 
-<% if @albums.any? %>
+  <% if @albums.any? %>
   <ul>
     <% @albums.each do |album| %>
-      <li><%= link_to album.name, album_path(album) %></li>
+    <li><%= link_to album.name, album_path(album) %></li>
     <% end %>
   </ul>
-<% else %>
+  <% else %>
   <p>There are no albums yet.</p>
-<% end %>
+  <% end %>
 
 
-<p><%= link_to "Create new album", new_album_path %></p>
+  <p><%= link_to "Create new album", new_album_path %></p>
+</div>
